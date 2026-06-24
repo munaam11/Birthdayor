@@ -245,41 +245,34 @@ a {
   background-position: center;
 }
 .photo-img1 {
-  background-image: url("../1743589014992.jpg");
-    background-size:110%;
-    background-position:50% 20%;
+  background-image: url("1743589014992.jpg");
 }
 .photo-img2 {
-  background-image: url("../IMG-20210926-WA0026.jpg");
+  background-image: url("IMG-20210926-WA0026.jpg");
 }
 .photo-img3 {
-  background-image: url("../IMG_20220705_110236.jpg");
+  background-image: url("IMG_20220705_110236.jpg");
 }
 .photo-img4 {
-    background-image: url("../1756477359286.jpg");
+  background-image: url("1756477359286.jpg");
 }
-
 .photo-img5 {
-    background-image: url("../IMG_20210226_170517.jpg");
-    background-position:center top;
+  background-image: url("IMG_20210226_170517.jpg");
+  background-position: center top;
 }
-
 .photo-img6 {
-    background-image: url("../1743589015041.jpg");
+  background-image: url("1743589015041.jpg");
 }
-
 .photo-img7 {
-    background-image: url("../IMG_20210513_192100.jpg");
-    background-position:center top;
-     background-size:70%;
+  background-image: url("IMG_20210513_192100.jpg");
+  background-position: center top;
+  background-size: 70%;
 }
-
 .photo-img8 {
-    background-image: url("../mmm.jpg");
+  background-image: url("mmm.jpg");
 }
-
 .photo-img9 {
-    background-image: url("../1665627680.0.jpg");
+  background-image: url("1665627680.0.jpg");
 }
 .photo-overlay {
   position: absolute;
