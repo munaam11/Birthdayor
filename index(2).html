@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>For my sister </title>	    
+    <link type="text/css" rel="stylesheet" href="./file/default.css">
+    <script type="text/javascript" src="./file/jquery.min.js"></script>
+    <script type="text/javascript" src="./file/jscex.min.js"></script>
+    <script type="text/javascript" src="./file/jscex-parser.js"></script>
+    <script type="text/javascript" src="./file/jscex-jit.js"></script>
+    <script type="text/javascript" src="./file/jscex-builderbase.min.js"></script>
+    <script type="text/javascript" src="./file/jscex-async.min.js"></script>
+    <script type="text/javascript" src="./file/jscex-async-powerpack.min.js"></script>
+    <script type="text/javascript" src="./file/functions.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./file/love.js" charset="utf-8"></script>
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+        }
+    </script>
+</head>
+<body>
+    <div id="rotatePrompt">Please rotate your tablet to landscape mode 📱↔️</div>
+    <div class="moon-hanger">
+
+        <div class="moon">
+            <div class="moon-string string1"></div>
+            <div class="moon-string string2"></div>
+        </div>
+
+        <div id="clock-box">
+            <div class="clock-item">
+                <span class="digit" id="years"></span>
+                <span class="clock-label">Years of Love ❤️<</span>
+            </div>
+            <div class="clock-item">
+                <span class="digit" id="days"></span>
+                <span class="clock-label">Days of Smiles 🌸</span>
+            </div>
+            <div class="clock-item">
+                <span class="digit" id="hours"></span>
+                <span class="clock-label">Hours of Memories ✨</span>
+            </div>
+            
+        </div>
+
+    </div>
+    <div class="falling-hearts"></div>
+    <div id="main">
+        <div id="error"><a href="https://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a> (<a href="http://firefox.com.cn/download/">Firefox</a>)</div>
+        <audio autoplay="autoplay" height="100" width="100" id="myAudio">
+            <source src="aud.mp3" type="audio/mp3" />
+            <embed height="100" width="100" src="aud.mp3" />
+        </audio>
+        <div id="wrap">
+            <div id="text">
+                <div id="code">
+                   <span class="say">Assalamualikum Mairi Phugi 💖</span><br>
+
+                    <span class="say">Happy Birthday 🎂✨</span><br>
+
+                    <span class="say">You’re not just my sister, you’re my best friend and a part of my heart 🌸</span><br>
+
+                    <span class="say">I’m so grateful for you and everything you do for me 🤍</span><br>
+
+                    <span class="say">May Allah bless you with happiness, success, and endless smiles ✨</span><br>
+
+                    <span class="say">Stay happy, stay blessed 💕</span><br>
+
+                    <span class="say">Love you always ❤️</span><br>
+
+                </div>
+            </div>
+            <div id="message-box"></div>
+            <canvas id="canvas" width="1100" height="680"></canvas>
+        </div>
+    </div>
+    <div id="celebration-button-container" class="hidden">
+        <button id="celebrationButton" class="celebration-button">Start Celebration</button>
+    </div>
+
+    <section id="photo-section" class="page-section hidden">
+        <div class="section-content">
+            <h2>Memories in Photos</h2>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <div class="photo-image photo-img1"></div>
+                    <div class="photo-overlay">
+                        <p>Every moment with you fills my heart with color.</p>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-image photo-img2"></div>
+                    <div class="photo-overlay">
+                        <p>This memory blooms brighter than any star.</p>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-image photo-img3"></div>
+                    <div class="photo-overlay">
+                        <p>Love and joy wrapped in every shared smile.</p>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-image photo-img4"></div>
+                    <div class="photo-overlay">
+                        <p>Every picture with you is a memory worth keeping forever 💕</p>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-image photo-img5"></div>
+                    <div class="photo-overlay">
+                        <p>Thank you for filling my life with happiness and laughter ✨</p>
+                    </div>
+                </div>
+
+                <div class="photo-card">
+                    <div class="photo-image photo-img6"></div>
+                    <div class="photo-overlay">
+                        <p>Some bonds are forever, and ours is one of them ❤️</p>
+                    </div>
+                </div>
+
+                <div class="photo-card">
+                    <div class="photo-image photo-img7"></div>
+                    <div class="photo-overlay">
+                        <p>You make every ordinary moment feel special 🌸</p>
+                    </div>
+                </div>
+
+                <div class="photo-card">
+                    <div class="photo-image photo-img8"></div>
+                    <div class="photo-overlay">
+                        <p>No matter how much time passes, our memories stay beautiful 🤍</p>
+                    </div>
+                </div>
+
+                <div class="photo-card">
+                    <div class="photo-image photo-img9"></div>
+                    <div class="photo-overlay">
+                        <p>Happy Birthday to the best sister anyone could ask for 🎂✨</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="special-note-section" class="page-section hidden">
+        <div class="section-content">
+            <div class="special-note-container">
+                <div class="special-note-card">
+                    <div class="note-content">
+                        <div class="sparkle-container">
+                            <span class="sparkle"></span>
+                            <span class="sparkle"></span>
+                            <span class="sparkle"></span>
+                            <span class="sparkle"></span>
+                        </div>
+                        <h2>A Special Message for You</h2>
+                        <p>On your special day, I don’t just want to wish you a happy birthday—I want you to truly feel how much you mean to me. You are not just my sister, you are a part of my heart, my safe place, and someone I can never imagine my life without.
+
+                            We may argue, tease each other, and have our little fights, but behind all of that is a bond that nothing can ever break. You’ve always been there for me in ways I don’t always say out loud, and I’m so grateful for every moment, every laugh, and every memory we’ve shared together.
+
+                            Your kindness, your strength, and your beautiful heart make you so special—not just to me, but to everyone lucky enough to know you. You bring light into people’s lives, and I’m so proud to call you my sister.
+
+                            I pray that Allah fills your life with endless happiness, peace, and success. May your dreams come true, your heart always stay full, and your smile never fade. You deserve all the love and joy this world has to offer.
+
+                            No matter where life takes us, you will always have a special place in my heart. I will always be here for you, just like you’ve always been there for me.
+
+                            Happy Birthday, my dear sister. I hope your day is as beautiful and special as you are. 🎂🎉💖
+
+                            With all my love,
+                            Your Brother ❤️</p>
+                        <div class="heart-animation">
+                            <svg viewBox="0 0 100 100" width="60" height="60">
+                                <path fill="currentColor" d="M50,90 C25,75 10,60 10,45 C10,35 18,28 28,28 C35,28 42,32 50,40 C58,32 65,28 72,28 C82,28 90,35 90,45 C90,60 75,75 50,90 Z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="floating-elements">
+                        <div class="float-item float1">✨</div>
+                        <div class="float-item float2">💝</div>
+                        <div class="float-item float3">⭐</div>
+                        <div class="float-item float4">💕</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="notes-section" class="page-section hidden">
+        <div class="section-content notes-content">
+            <h2>Notes for You</h2>
+
+            <div class="note-card">
+                <h3>Always</h3>
+                <p>No matter how much we grow, you'll always be my little piece of home. 💖</p>
+            </div>
+
+            <div class="note-card">
+                <h3>Wish</h3>
+                <p>May Allah bless you with endless happiness and beautiful moments. 🌸</p>
+            </div>
+
+            <div class="note-card">
+                <h3>Thank You</h3>
+                <p>Thank you for every laugh, every memory, and every moment we've shared. 🌷</p>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function(){
+        var celebrationButton = document.getElementById('celebrationButton');
+        if (celebrationButton) {
+            celebrationButton.addEventListener('click', function() {
+                var photoSection = document.getElementById('photo-section');
+                var specialNoteSection = document.getElementById('special-note-section');
+                var notesSection = document.getElementById('notes-section');
+                photoSection.classList.remove('hidden');
+                specialNoteSection.classList.remove('hidden');
+                notesSection.classList.remove('hidden');
+                photoSection.classList.add('slide-up');
+                specialNoteSection.classList.add('slide-up');
+                notesSection.classList.add('slide-up');
+                requestAnimationFrame(function() {
+                    photoSection.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        }
+    });
+
+    (function() {
+        var canvas = $('#canvas');
+		
+        if (!canvas[0].getContext) {
+            $("#error").show();
+            return false;
+        }
+
+        var width = canvas.width();
+        var height = canvas.height();        
+        canvas.attr("width", width);
+        canvas.attr("height", height);
+
+        var opts = {
+            seed: {
+                x: width / 2 - 20,
+                color: "rgb(190, 26, 37)",
+                scale: 2
+            },
+            branch: [
+                [535, 680, 570, 250, 500, 200, 30, 100, [
+                    [540, 500, 455, 417, 340, 400, 13, 100, [
+                        [450, 435, 434, 430, 394, 395, 2, 40]
+                    ]],
+                    [550, 445, 600, 356, 680, 345, 12, 100, [
+                        [578, 400, 648, 409, 661, 426, 3, 80]
+                    ]],
+                    [539, 281, 537, 248, 534, 217, 3, 40],
+                    [546, 397, 413, 247, 328, 244, 9, 80, [
+                        [427, 286, 383, 253, 371, 205, 2, 40],
+                        [498, 345, 435, 315, 395, 330, 4, 60]
+                    ]],
+                    [546, 357, 608, 252, 678, 221, 6, 100, [
+                        [590, 293, 646, 277, 648, 271, 2, 80]
+                    ]]
+                ]] 
+            ],
+            bloom: {
+                num: 700,
+                width: 1080,
+                height: 650,
+            },
+            footer: {
+                width: 1200,
+                height: 5,
+                speed: 10,
+            }
+        }
+
+        var tree = new Tree(canvas[0], width, height, opts);
+        var seed = tree.seed;
+        var foot = tree.footer;
+        var hold = 1;
+
+        canvas.click(function(e) {
+            playAudio();
+            var offset = canvas.offset(), x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            if (seed.hover(x, y)) {
+                hold = 0; 
+                canvas.unbind("click");
+                canvas.unbind("mousemove");
+                canvas.removeClass('hand');
+            }
+        }).mousemove(function(e) {
+            var offset = canvas.offset(), x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            canvas.toggleClass('hand', seed.hover(x, y));
+        });
+
+        var seedAnimate = eval(Jscex.compile("async", function () {
+            seed.draw();
+            while (hold) {
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canScale()) {
+                seed.scale(0.95);
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canMove()) {
+                seed.move(0, 2);
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+        }));
+
+        var growAnimate = eval(Jscex.compile("async", function () {
+            do {
+                tree.grow();
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canGrow());
+        }));
+
+        var flowAnimate = eval(Jscex.compile("async", function () {
+            do {
+                tree.flower(2);
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canFlower());
+        }));
+
+        var moveAnimate = eval(Jscex.compile("async", function () {
+            tree.snapshot("p1", 240, 0, 610, 680);
+            while (tree.move("p1", 500, 0)) {
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+            foot.draw();
+            tree.snapshot("p2", 500, 0, 610, 680);
+
+            canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
+        }));
+
+        var birthday = "2002-06-25 00:00:00";
+
+        var clockAnimate = eval(Jscex.compile("async", function () {
+            timeElapse(birthday);
+            // update every minute without re-animating labels
+            setInterval(function() {
+                timeElapse(birthday);
+            }, 60000);
+            $("#clock-box").show();
+            // animate only the digits once with typing effect
+            var yearsText = $("#years").text();
+            var daysText = $("#days").text();
+            var hoursText = $("#hours").text();
+            // slower typing for a gentle effect: years -> days -> hours -> minutes
+            typeDigits($("#years"), yearsText, 90, function(){
+                typeDigits($("#days"), daysText, 90, function(){
+                    typeDigits($("#hours"), hoursText, 90);
+                    });
+                });
+            }));
+
+        var runAsync = eval(Jscex.compile("async", function () {
+            $await(seedAnimate());
+            $await(growAnimate());
+            $await(flowAnimate());
+            $await(moveAnimate());
+        }));
+
+        var task = runAsync();
+        task.addEventListener('complete', function() {
+            var clockTask = clockAnimate();
+           clockTask.addEventListener('complete', function() {
+             setTimeout(function() {
+                startFallingHearts();
+                $("#code").show().typewriter(function() {
+                    
+                    document.getElementById('celebration-button-container').classList.remove('hidden');
+                });
+             }, 100);
+           });
+            clockTask.start();
+        });
+        task.start();
+    })();
+    </script>
+    <script>
+    for(let i=0;i<120;i++){
+        const star=document.createElement("div");
+
+        star.className="star";
+        star.innerHTML="✦";
+
+        star.style.left=Math.random()*100+"vw";
+        star.style.top=Math.random()*100+"vh";
+        star.style.fontSize=(5+Math.random()*10)+"px";
+
+        document.body.appendChild(star);
+    }
+    </script>
+    <script>
+    let heartInterval;
+
+    function createFallingHeart() {
+        const container = document.querySelector(".falling-hearts");
+        if (!container) return;
+
+        if (container.children.length > 18) return; // prevents lag
+
+        const heart = document.createElement("div");
+        heart.className = "falling-heart";
+
+        const hearts = ["🌸","🌸","🌸","🍃","🍃","🌺","💮"];
+        heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (18 + Math.random() * 12) + "px";
+        heart.style.animationDuration = (6 + Math.random() * 3) + "s";
+
+        container.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 9000);
+    }
+
+    function startFallingHearts() {
+        if (heartInterval) return;
+        heartInterval = setInterval(createFallingHeart, 500);
+    }
+    </script>
+</body>
+</html>

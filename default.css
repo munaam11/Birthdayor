@@ -1,0 +1,1019 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #02003f;
+  font-size: 14px;
+  font-family: sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+a {
+  color: white;
+  font-size: 14px;
+}
+#main {
+  width: 100%;
+}
+#wrap {
+  position: relative;
+  margin: 0 auto;
+  width: 1100px;
+  height: 680px;
+  margin-top: 80px; /* adjust this value */
+}
+#text {
+  width: 350px;
+  height: 560px;
+  left: 120px;
+  top: 70px;
+  position: absolute;
+}
+#code{
+    display:none;
+    color:rgb(196,255,255);
+    font-family:'Montserrat', sans-serif;
+    font-size:26px;
+    line-height:42px;
+    font-weight:500;
+    text-shadow:0 0 10px rgba(255,255,255,.35);
+}
+#clock-box{
+    position:absolute;
+    /* tuned center under moon strings */
+    left:35px;
+    top:330px;
+    z-index:9999;
+
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+
+    transform-origin:top center;
+    transform: translateX(-50%);
+
+    animation: swing 6s ease-in-out infinite;
+}
+#clock-box a {
+  font-size: 28px;
+  text-decoration: none;
+}
+.clock-item{
+    background:rgba(255,255,255,0.08);
+    
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:20px;
+    padding:12px 18px;
+    margin-bottom:12px;
+    text-align:center;
+    box-shadow:
+        0 0 15px rgba(255,255,255,0.08);
+}
+.clock-label {
+  display: block;
+  margin-top: 8px;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.9);
+}
+#clock-box .digit{
+    color:#ffffff;
+    font-size:24px;
+    font-weight:700;
+
+    text-shadow:
+        0 0 6px #ffffff,
+        0 0 12px rgba(255,255,255,.8);
+}
+#canvas {
+  margin: 0 auto;
+  width: 1100px;
+  height: 680px;
+}
+#celebration-button-container {
+  position: relative;
+  left: auto;
+  bottom: auto;
+  transform: none;
+  z-index: 9999;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 0;
+}
+.hidden {
+  display: none !important;
+}
+.slide-up {
+  animation: slideUpIn 0.8s ease forwards;
+}
+@keyframes slideUpIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.celebration-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff6178, #ffb6c1);
+  color: #081033;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 32px;
+  border-radius: 999px;
+  box-shadow: 0 16px 30px rgba(255, 97, 120, 0.24);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.celebration-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 36px rgba(255, 97, 120, 0.32);
+}
+#error {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 60px;
+  display: none;
+}
+.hand {
+  cursor: pointer;
+}
+.say {
+  margin-left: 5px;
+}
+.space {
+  margin-right: 150px;
+}
+
+#message-box{
+  position: absolute;
+  margin-top:450px;
+  font-size: 25px;
+  font-family: monospace;
+}
+
+#welcome-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #02003f;
+}
+
+.welcome-hidden {
+  display: none !important;
+}
+
+.welcome-card {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.welcome-card h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  margin: 0 0 30px;
+  color: #ffb6c1;
+  letter-spacing: 0.05em;
+}
+
+.welcome-card button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff6178, #ffb6c1);
+  color: #081033;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 32px;
+  border-radius: 999px;
+  box-shadow: 0 12px 24px rgba(255, 97, 120, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.welcome-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(255, 97, 120, 0.36);
+}
+
+.page-section {
+  padding: 80px 20px 120px;
+}
+.section-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+#photo-section {
+  background: linear-gradient(180deg, rgba(2, 0, 52, 0.92), rgba(2, 0, 52, 0.72));
+}
+#photo-section h2,
+#notes-section h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 24px;
+  color: #ffe3f2;
+}
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.photo-card {
+  position: relative;
+  min-height: 310px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.18);
+}
+.photo-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(255, 182, 193, 0.22), transparent 28%),
+              radial-gradient(circle at bottom right, rgba(158, 112, 255, 0.16), transparent 30%);
+}
+.photo-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.photo-img1 {
+  background-image: url("../1743589014992.jpg");
+    background-size:110%;
+    background-position:50% 20%;
+}
+.photo-img2 {
+  background-image: url("../IMG-20210926-WA0026.jpg");
+}
+.photo-img3 {
+  background-image: url("../IMG_20220705_110236.jpg");
+}
+.photo-img4 {
+    background-image: url("../1756477359286.jpg");
+}
+
+.photo-img5 {
+    background-image: url("../IMG_20210226_170517.jpg");
+    background-position:center top;
+}
+
+.photo-img6 {
+    background-image: url("../1743589015041.jpg");
+}
+
+.photo-img7 {
+    background-image: url("../IMG_20210513_192100.jpg");
+    background-position:center top;
+     background-size:70%;
+}
+
+.photo-img8 {
+    background-image: url("../mmm.jpg");
+}
+
+.photo-img9 {
+    background-image: url("../1665627680.0.jpg");
+}
+.photo-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: rgba(0, 0, 0, 0.55);
+}
+.photo-card:hover .photo-overlay,
+.photo-card:focus-within .photo-overlay {
+  opacity: 1;
+}
+.photo-overlay p {
+  margin: 0;
+  color: #ffe8f7;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* SPECIAL NOTE SECTION */
+#special-note-section {
+  background: linear-gradient(180deg, rgba(2, 0, 52, 0.95) 0%, rgba(20, 5, 60, 0.9) 50%, rgba(2, 0, 52, 0.95) 100%);
+  position: relative;
+  overflow: hidden;
+}
+#special-note-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 182, 193, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(158, 112, 255, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+.special-note-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+}
+.special-note-card {
+  position: relative;
+  width: 90%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 182, 193, 0.3);
+  border-radius: 40px;
+  padding: 60px 50px;
+  box-shadow: 
+    0 0 60px rgba(255, 182, 193, 0.15),
+    0 0 120px rgba(158, 112, 255, 0.1),
+    inset 0 0 60px rgba(255, 255, 255, 0.05);
+  animation: cardGlow 3s ease-in-out infinite;
+}
+@keyframes cardGlow {
+  0%, 100% {
+    box-shadow: 
+      0 0 60px rgba(255, 182, 193, 0.15),
+      0 0 120px rgba(158, 112, 255, 0.1),
+      inset 0 0 60px rgba(255, 255, 255, 0.05);
+  }
+  50% {
+    box-shadow: 
+      0 0 80px rgba(255, 182, 193, 0.25),
+      0 0 160px rgba(158, 112, 255, 0.15),
+      inset 0 0 60px rgba(255, 255, 255, 0.08);
+  }
+}
+.note-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+.sparkle-container {
+  position: relative;
+  height: 60px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle at 30% 30%, #fff, rgba(255, 182, 193, 0.5));
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(255, 182, 193, 0.8);
+  animation: sparkleFloat 2s ease-in-out infinite;
+}
+.sparkle:nth-child(1) {
+  left: -30px;
+  animation-delay: 0s;
+}
+.sparkle:nth-child(2) {
+  left: -15px;
+  animation-delay: 0.3s;
+}
+.sparkle:nth-child(3) {
+  right: -15px;
+  animation-delay: 0.6s;
+}
+.sparkle:nth-child(4) {
+  right: -30px;
+  animation-delay: 0.9s;
+}
+@keyframes sparkleFloat {
+  0%, 100% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) scale(1);
+    opacity: 1;
+  }
+}
+#special-note-section h2 {
+  font-size: 4rem;
+  margin: 0 0 30px;
+  color: #ffe3f2;
+  background: linear-gradient(135deg, #ffb6c1, #ffc5e0, #fff0f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  animation: titleGlow 2s ease-in-out infinite;
+  font-family: 'Poppins', cursive;
+  font-weight: normal;
+}
+@keyframes titleGlow {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.1);
+  }
+}
+#special-note-section p {
+    font-family: 'Georgia', serif;
+    font-size: 1.2rem;
+    line-height: 2.1;
+    color: rgba(255,240,245,0.95);
+
+    text-align: left;
+
+    letter-spacing: 0.3px;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,0.08);
+}
+#special-note-section p::first-letter{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffb6c1;
+}
+.heart-animation {
+  position: relative;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff6178;
+  animation: heartBeat 1.3s ease-in-out infinite;
+}
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(0.95);
+  }
+  20%, 40%, 60%, 80% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.floating-elements {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.float-item {
+  position: absolute;
+  font-size: 2rem;
+  animation: floatEmoji 6s ease-in-out infinite;
+}
+.float1 {
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+.float2 {
+  top: 15%;
+  right: 8%;
+  animation-delay: 1.5s;
+}
+.float3 {
+  bottom: 15%;
+  left: 10%;
+  animation-delay: 3s;
+}
+.float4 {
+  bottom: 10%;
+  right: 5%;
+  animation-delay: 4.5s;
+}
+@keyframes floatEmoji {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateY(-20px) rotate(10deg) scale(1.1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-40px) rotate(0deg) scale(1);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translateY(-20px) rotate(-10deg) scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+#notes-section {
+  background: #05041e;
+}
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+.note-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
+}
+.note-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.4rem;
+  color: #ffc5e0;
+}
+.note-card p {
+  margin: 0;
+  line-height: 1.8;
+  font-size: 15px;
+  color: rgba(255,255,255,0.82);
+}
+/* MOON */
+.moon{
+    position:relative;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:white;
+    box-shadow:
+    0 0 30px white,
+    0 0 70px white,
+    0 0 120px rgba(255,255,255,.4);
+    z-index:9999;
+}
+
+.moon::after{
+    content:"";
+    position:absolute;
+    width:165px;
+    height:165px;
+    border-radius:50%;
+    background:#02003f;
+    left:35px;
+    top:5px;
+}
+.moon-string{
+    position:absolute;
+    width:2px;
+    background:rgba(255,255,255,.8);
+    top:170px;
+
+    height:160px;
+
+    transform-origin:top;
+    transform:scaleY(0);
+
+    animation:dropString 2s ease forwards;
+}
+
+.string2{
+    left:120px;
+    animation-delay:.15s;
+}
+
+.string1{
+    left:60px;
+}
+#crystal-pendant{
+    position:absolute;
+    top:250px;
+    left:-5px;
+
+    width:240px;
+    height:360px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.25),
+            rgba(140,180,255,.15)
+        );
+
+    clip-path: polygon(
+        50% 0%,
+        90% 18%,
+        100% 70%,
+        50% 100%,
+        0% 70%,
+        10% 18%
+    );
+
+    backdrop-filter: blur(8px);
+
+    border:2px solid rgba(255,255,255,.35);
+
+    box-shadow:
+        0 0 30px rgba(100,180,255,.4),
+        inset 0 0 20px rgba(255,255,255,.2);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+}
+
+.counter-block{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.counter-block span{
+    font-size:58px;
+    font-weight:700;
+    color:white;
+}
+
+.label{
+    font-size:28px;
+    margin-top:5px;
+}
+
+.sub-label{
+    font-size:22px;
+    opacity:.9;
+    font-style:italic;
+}
+
+.divider{
+    width:120px;
+    height:2px;
+    background:rgba(255,255,255,.4);
+    margin:20px 0;
+}
+
+#branch-msg{
+    position:absolute;
+    /* positioned relative to .moon-hanger so it sits near the moon */
+    left:150px;
+    top:200px;
+    width:220px;
+    display:none;
+    color:rgb(196,255,255);
+    font-family: 'Montserrat', sans-serif;
+    font-size:16px;
+    line-height:20px;
+    text-shadow:0 0 8px rgba(255,255,255,.28);
+    z-index:9999;
+    text-align:left;
+}
+
+.moon-hanger{
+    position:fixed;
+    top:15px;
+    left:15px;
+    z-index:9999;
+
+    transform-origin:top center;
+    animation:swing 6s ease-in-out infinite;
+}
+
+
+/* STARS */
+.star{
+    position:fixed;
+    color:white;
+    z-index:1;
+    animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+    0%,100%{
+        opacity:.2;
+    }
+    50%{
+        opacity:1;
+    }
+}
+
+
+@media (max-width: 768px){
+
+    #wrap{
+        width:100%;
+        height:100vh;
+        transform:scale(0.55);
+        transform-origin:top center;
+        margin-top:20px;
+    }
+
+    #text{
+        left:100px;
+    }
+  
+    #clock-box{
+        left:90px;
+        top:330px;
+        display:flex;
+        gap:20px;
+        transform: translateX(-50%);
+    }
+
+    #clock-box .digit{
+        font-size:40px;
+    }
+
+    .clock-label {
+      font-size: 13px;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.75);
+    }
+
+    #code{
+        font-size:14px;
+        line-height:22px;
+    }
+
+    .moon{
+        width:120px;
+        height:120px;
+    }
+
+    .moon::after{
+        width:110px;
+        height:110px;
+    }
+
+    .balloon{
+        width:60px;
+        height:80px;
+    }
+
+    .photo-grid,
+    .notes-grid {
+        gap: 18px;
+    }
+}
+@keyframes swing{
+    0%,100%{
+        transform:rotate(-2deg);
+    }
+
+    50%{
+        transform:rotate(2deg);
+    }
+}
+@keyframes dropString{
+    0%{
+        transform:scaleY(0);
+    }
+    100%{
+        transform:scaleY(1);
+    }
+}
+@keyframes showCounter{
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* =========================================================
+   FINAL TABLET FIX - keeps reference layout + animations
+   ========================================================= */
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    padding:0;
+    background:#02003f;
+    overflow-x:hidden;
+}
+
+/* keep original 1100x680 stage, centered like your 2nd image */
+#main{
+    width:100%;
+    overflow:hidden;
+}
+
+#wrap{
+    position:relative !important;
+    width:1100px !important;
+    height:680px !important;
+    margin:80px auto 0 auto !important;
+    transform:none !important;
+    transform-origin:top center !important;
+}
+
+#canvas{
+    width:1100px !important;
+    height:680px !important;
+    display:block;
+}
+
+
+/* moon stays top-left */
+.moon-hanger{
+    position:absolute !important;
+    left:0 !important;
+    top:0 !important;
+    z-index:9998 !important;
+    /* animation-only fix: keep same position, allow hanger to swing */
+    transform-origin:top left !important;
+    animation:swing 6s ease-in-out infinite !important;
+}
+
+/* restore moon animation/visuals, don't freeze it */
+.moon{
+    transform:none;
+    transform-origin:center top;
+}
+
+/* Make the clock hang from moon strings and keep swing animation */
+#clock-box{
+    position:absolute !important;
+    left:88px !important;
+    top:300px !important;
+    z-index:9999 !important;
+
+    display:flex !important;
+    flex-direction:column !important;
+    gap:30px !important;
+
+    transform:translateX(-50%) !important;
+    transform-origin:top center !important;
+    animation:swing 6s ease-in-out infinite !important;
+}
+
+/* extend visible moon strings down to clock */
+.moon-string.string1{
+    height:125px !important;
+}
+
+.moon-string.string2{
+    height:125px !important;
+}
+
+/* balloons same height, closer to edge, with animation restored */
+.balloon{
+    transform:none;
+}
+
+.balloon1{
+    right:105px !important;
+}
+
+.balloon2{
+    right:28px !important;
+}
+
+/* button must stay hidden until JS removes hidden after tree animation */
+#celebration-button-container.hidden{
+    display:none !important;
+}
+
+#celebration-button-container{
+    width:100% !important;
+    justify-content:center !important;
+    padding:24px 0 0 !important;
+    margin:0 !important;
+    position:relative !important;
+    z-index:9999 !important;
+}
+
+/* rotate message */
+#rotatePrompt{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:999999;
+    background:#02003f;
+    color:white;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-family:'Montserrat', sans-serif;
+    font-size:28px;
+    line-height:1.4;
+    padding:30px;
+}
+
+/* tablet landscape: keep same composition as 2nd image */
+@media screen and (max-width:1400px) and (orientation:landscape){
+    #wrap{
+        width:1100px !important;
+        height:680px !important;
+        margin-top:80px !important;
+        transform:none !important;
+    }
+
+    #canvas{
+        width:1100px !important;
+        height:680px !important;
+    }
+
+    #text{
+        left:90px !important;
+        top:55px !important;
+        width:420px !important;
+        height:560px !important;
+    }
+
+    #clock-box{
+        left:88px !important;
+        top:300px !important;
+        transform:translateX(-50%) !important;
+        animation:swing 6s ease-in-out infinite !important;
+    }
+
+    .moon,
+    .balloon{
+        transform:none;
+    }
+
+    .moon-hanger{
+        animation:swing 6s ease-in-out infinite !important;
+        transform-origin:top left !important;
+    }
+}
+
+/* only scale if screen is smaller than the design */
+@media screen and (max-width:1120px) and (orientation:landscape){
+    #wrap{
+        transform:scale(calc((100vw - 20px) / 1100)) !important;
+        transform-origin:top center !important;
+    }
+
+    #main{
+        height:calc(680px * ((100vw - 20px) / 1100) + 100px);
+    }
+}
+
+/* portrait: ask to rotate */
+@media screen and (orientation:portrait){
+    body{
+        overflow:hidden;
+    }
+
+    #rotatePrompt{
+        display:flex;
+    }
+
+    #main,
+    .moon-hanger,
+    .balloon,
+    #celebration-button-container,
+    #photo-section,
+    #welcome-section{
+        display:none !important;
+    }
+}
+.falling-hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.falling-heart {
+  position: absolute;
+  top: -30px;
+  font-size: 26px;
+  animation: heartFall linear forwards;
+  opacity: 0.9;
+}
+
+@keyframes heartFall {
+  0% {
+    transform: translateY(-30px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
